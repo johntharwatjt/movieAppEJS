@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/links') %>
+
+    <title>Document</title>
+</head>
+<body>
+    <%- include('partials/nav') %>
+    
+    <main class="container-fluid"> 
+    <div class="title text-white bg-dark"><h1><%= movieType%> <%=choose%></h1></div>
+
+        <div class="row ">
+        <% for (let i=0; i<12; i++) { %>
+            
+<div class="card-container pt-5"> 
+    <div class="card " style="width: 18rem;">
+        <img class="card-img-top" src=" <%= Allmovies(i).image%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= Allmovies(i).title %></h5>
+          <p class="card-text"><%= Allmovies(i).overView %> </p>
+        </div>
+      </div>
+    </div>
+
+    <% } %>
+</div>  
+
+    </main>
+</body>
+</html>
